@@ -12,7 +12,7 @@ $dark-blue: #12537e;
     font-family: $font;
   }
 
-  dt {
+  .accordion-header {
     background-color: $light-blue;
     color: white;
     font-weight: 600;
@@ -21,12 +21,19 @@ $dark-blue: #12537e;
     &:hover {
       cursor: pointer;
     }
+
+    &.active {
+      & + .accordion-body {
+        display: block;
+        max-height: 500px;
+      }
+    }
   }
 
-  dd {
+  .accordion-body {
     border: 1px solid $light-blue;
     color: $dark-blue;
-    display: block;
+    display: none;
     margin: 0;
     padding: 0 20px;
   }
