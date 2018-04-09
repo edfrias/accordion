@@ -1,0 +1,33 @@
+$font: BlinkMacSystemFont,-apple-system,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+$light-blue: #209cee;
+$dark-blue: #12537e;
+
+.accordion {
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hiden;
+
+  * {
+    font-family: $font;
+  }
+
+  dt {
+    background-color: $light-blue;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  dd {
+    border: 1px solid $light-blue;
+    color: $dark-blue;
+    display: block;
+    margin: 0;
+    padding: 0 20px;
+  }
+}
