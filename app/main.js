@@ -1,4 +1,3 @@
-let app = (name) => {
-  console.log(`hello from ${name}`);
-}
-app('Edgar');
+import Accordion from '../src/components/accordion/accordion';
+
+accordion.openPanel();
