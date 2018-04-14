@@ -2,7 +2,9 @@
   "extends": "airbnb",
   "rules": {
     "max-len": ["error", 250, 2, {"ignoreComments": true}],
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "class-methods-use-this": 0,
+    "no-unused-expressions": ["error", {"allowShortCircuit": true, "allowTernary": true}]
   },
   "parser": "babel-eslint",
   "globals": {
