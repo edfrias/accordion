@@ -1,40 +1,88 @@
 $font: "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
-$light-blue: #209cee;
 $dark-blue: #12537e;
+$light-blue: #209cee;
+$light-green: #00d1b2;
+$light-grey: #f5f5f5;
+$white: #fff;
 
-.accordion {
-  border-radius: 4px;
+.container {
   display: grid;
-  grid-template-columns: 1fr;
-  overflow: hidden;
+  justify-content: center;
 
   * {
     font-family: $font;
   }
 
-  .accordion-header {
-    background-color: $light-blue;
-    color: white;
-    font-weight: 600;
-    padding: 10px 20px;
+  .title {
+    color: $light-blue;
+    text-align: center;
+  }
 
-    &:hover {
-      cursor: pointer;
+  hr {
+    background-color: $light-grey;
+    border: none;
+    display: block;
+    height: 2px;
+    width: 100%;
+  }
+
+  .accordion {
+    border-radius: 4px;
+    min-width: 400px;
+    overflow: hidden;
+
+    .accordion-header {
+      background-color: $light-blue;
+      color: white;
+      font-weight: 600;
+      padding: 10px 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.active {
+        & + .accordion-body {
+          display: block;
+          max-height: 500px;
+        }
+      }
     }
 
-    &.active {
-      & + .accordion-body {
-        display: block;
-        max-height: 500px;
-      }
+    .accordion-body {
+      border: 1px solid $light-blue;
+      color: $dark-blue;
+      display: none;
+      margin: 0;
+      padding: 0 20px;
     }
   }
 
-  .accordion-body {
-    border: 1px solid $light-blue;
-    color: $dark-blue;
-    display: none;
-    margin: 0;
-    padding: 0 20px;
+  .feeder {
+    align-items: center;
+    background-color: $light-green;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: none;
+    border-color: transparent;
+    border-width: 1px;
+    color: $white;
+    cursor: pointer;
+    display: grid;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2.25em;
+    justify-self: center;
+    line-height: 1.5;
+    padding: 5px 12px;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
