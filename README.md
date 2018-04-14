@@ -1,2 +1,10 @@
 # accordion
 Another ES6 framework-less accordion repo to try things...
+
+---
+
+- Download the repo
+- Install dependencies with 'npm install' command
+- You can build the project with 'npm run build'
+- To try it just run the project with 'npm run start'
+- You can pass the eslint or stylelint with 'npm run lint' all together or 'npm run lint-(css/js)' separatedly
