@@ -7,7 +7,7 @@
     "lint": "npm run lint-js && npm run lint-css",
     "lint-js": "./node_modules/.bin/eslint *.js",
     "lint-css": "./node_modules/.bin/stylelint './**/*.scss' --syntax scss",
-    "start": "npm run lint && webpack-dev-server --mode development",
+    "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
   "repository": {

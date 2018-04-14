@@ -17,11 +17,11 @@ const panelsContent = [
 ];
 
 class Accordion {
-  constructor(container) {
+  constructor(container, panelsContent) { /* eslint-disable-line */
     this.panelsContent = panelsContent;
 
     panelsContent.forEach((panelData) => {
-      Panel(panelData, container);
+      const panel = new Panel(panelData, container); /* eslint-disable-line */
     });
   }
 
