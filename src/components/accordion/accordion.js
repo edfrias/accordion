@@ -18,11 +18,11 @@ const panelsContent = [
 
 class Accordion {
   constructor(container, panelsContent) {
-     this.panelsContent = panelsContent;
+    this.panelsContent = panelsContent;
 
-      panelsContent.forEach((panelData) => {
-        const panel = new Panel(panelData, container);
-      });
+    panelsContent.forEach((panelData) => {
+      const panel = new Panel(panelData, container);
+    });
   }
 
   openPanel() {
