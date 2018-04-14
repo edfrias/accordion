@@ -6,7 +6,7 @@ function generatePanel(title, content) {
 }
 
 class Panel {
-  constructor({heading, content}, container){
+  constructor({ heading, content }, container) {
     const panelHtml = generatePanel(heading, content);
     container.insertAdjacentHTML('beforeend', panelHtml);
   }
