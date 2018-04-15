@@ -1,5 +1,13 @@
 # accordion
-Another ES6 framework-less accordion repo to try things...
+Another ES6 framework-less accordion repo to try things.
+Based on my: https://codepen.io/edofris/pen/JLwQMz
+
+This are the criteria for this component:
+ - Only js vanilla without frameworks
+ - Use ES6
+ - Try to add new sections with Ajax calls
+
+ Hope this could help someone, is reeeally improvable...
 
 ---
 
