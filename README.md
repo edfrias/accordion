@@ -7,7 +7,7 @@ This are the criteria for this component:
  - Use ES6
  - Try to add new sections with Ajax calls
 
- Hope this could help someone, is reeeally improvable...
+ This is reeeally improvable...
 
 ---
 
