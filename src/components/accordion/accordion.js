@@ -1,5 +1,6 @@
 import './index.scss';
 import Panel from './panel';
+import AjaxRequest from './ajaxPanels';
 
 const panelsContent = [
   {
@@ -50,8 +51,16 @@ class Accordion {
   }
 }
 
+const addButton = '<button class="feeder" onclick="">Feed the accordion!</button>';
 const container = document.querySelector('.accordion');
+container.insertAdjacentHTML('beforeend', addButton);
 const accordion = new Accordion(container, panelsContent);
+const ajaxRequest = new AjaxRequest('https://codepen.io/edofris/pen/mxZwNQ.js');
+
+ajaxRequest.ajaxGet().then((newPanels) => {
+  ajaxRequest.addPanels(newPanels);
+});
+
 accordion.openPanel();
 
 export default Accordion;
