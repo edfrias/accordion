@@ -19,7 +19,6 @@ const panelsContent = [
 class Accordion {
   constructor(container, panelsContent) { /* eslint-disable-line */
     this.panelsContent = panelsContent;
-
     panelsContent.forEach((panelData) => {
       const panel = new Panel(panelData, container); /* eslint-disable-line */
     });
