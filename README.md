@@ -1,8 +1,9 @@
 # accordion
 Another ES6 framework-less accordion repo to try things.
 
-You can try it here: https://edfrias.github.io/accordion/\
-Is based on my: https://codepen.io/edofris/pen/JLwQMz
+> You can try it here: https://edfrias.github.io/accordion/
+
+> Is based on my: https://codepen.io/edofris/pen/JLwQMz
 
 This are the criteria for this component:
  - Only js vanilla without frameworks
