@@ -6,9 +6,9 @@ function generatePanel(title, content) {
 }
 
 class Panel {
-  constructor({ heading, content }, container) {
+  constructor({ heading, content }, accordionContainer) {
     const panelHtml = generatePanel(heading, content);
-    container.insertAdjacentHTML('beforeend', panelHtml);
+    accordionContainer.insertAdjacentHTML('beforeend', panelHtml);
   }
 }
 

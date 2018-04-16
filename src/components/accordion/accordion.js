@@ -18,10 +18,10 @@ const panelsContent = [
 ];
 
 class Accordion {
-  constructor(container, panelsContent) { /* eslint-disable-line */
+  constructor(accordionContainer, panelsContent) { /* eslint-disable-line */
     this.panelsContent = panelsContent;
     panelsContent.forEach((panelData) => {
-      const panel = new Panel(panelData, container); /* eslint-disable-line */
+      const panel = new Panel(panelData, accordionContainer); /* eslint-disable-line */
     });
   }
 
@@ -30,10 +30,10 @@ class Accordion {
     accordionHeading.forEach((item) => {
       item.addEventListener('click', () => {
         accordionHeading.forEach((element) => {
-          element.classList.contains('active') && element.classList.remove('active');
+          element.classList.contains('is-active') && element.classList.remove('is-active');
         });
 
-        item.classList.add('active');
+        item.classList.add('is-active');
       });
     });
   }
@@ -44,21 +44,23 @@ class Accordion {
     accordionHeading.forEach((item) => {
       item.addEventListener('click', () => {
         accordionHeading.forEach((element) => {
-          element.classList.contains('active') ? element.classList.remove('active') : element.classList.add('active');
+          element.classList.contains('is-active') ? element.classList.remove('is-active') : element.classList.add('is-active');
         });
       });
     });
   }
 }
 
-const addButton = '<button class="feeder" onclick="">Feed the accordion!</button>';
-const container = document.querySelector('.accordion');
-container.insertAdjacentHTML('beforeend', addButton);
-const accordion = new Accordion(container, panelsContent);
+const accordionContainer = document.querySelector('.accordion');
+const accordion = new Accordion(accordionContainer, panelsContent);
 const ajaxRequest = new AjaxRequest('https://codepen.io/edofris/pen/mxZwNQ.js');
 
 ajaxRequest.ajaxGet().then((newPanels) => {
-  ajaxRequest.addPanels(newPanels);
+  const pageButton = document.querySelector('.feeder');
+  pageButton.addEventListener('click', () => {
+    ajaxRequest.addPanels(newPanels);
+    accordion.openPanel();
+  });
 });
 
 accordion.openPanel();
