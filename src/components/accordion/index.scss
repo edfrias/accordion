@@ -42,7 +42,7 @@ $white: #fff;
         cursor: pointer;
       }
 
-      &--active { // active state controls which is opened
+      &.is-active { // active state controls which is opened
         & + .accordion-body {
           display: block;
           max-height: 500px;
