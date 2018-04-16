@@ -1,11 +1,11 @@
-$font: "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+$font: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $dark-blue: #12537e;
 $light-blue: #209cee;
 $light-green: #00d1b2;
 $light-grey: #f5f5f5;
 $white: #fff;
 
-.container {
+.container { // whole container
   display: grid;
   justify-content: center;
 
@@ -18,7 +18,7 @@ $white: #fff;
     text-align: center;
   }
 
-  hr {
+  hr { // separator
     background-color: $light-grey;
     border: none;
     display: block;
@@ -26,13 +26,14 @@ $white: #fff;
     width: 100%;
   }
 
-  .accordion {
+  .accordion { // the container of all panels
     border-radius: 4px;
     min-width: 400px;
     overflow: hidden;
 
     .accordion-header {
       background-color: $light-blue;
+      border-bottom: 1px solid $light-grey;
       color: white;
       font-weight: 600;
       padding: 10px 20px;
@@ -41,7 +42,7 @@ $white: #fff;
         cursor: pointer;
       }
 
-      &.active {
+      &--active { // active state controls which is opened
         & + .accordion-body {
           display: block;
           max-height: 500px;
@@ -51,14 +52,16 @@ $white: #fff;
 
     .accordion-body {
       border: 1px solid $light-blue;
+      border-top: 0 none;
       color: $dark-blue;
       display: none;
       margin: 0;
+      overflow: hidden;
       padding: 0 20px;
     }
   }
 
-  .feeder {
+  .feeder { // the button to add new panels
     align-items: center;
     background-color: $light-green;
     border: 1px solid transparent;
