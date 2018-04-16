@@ -32,10 +32,8 @@ class AjaxRequest {
   }
 }
 
-// const ajaxRequest = new AjaxRequest('https://codepen.io/edofris/pen/mxZwNQ.js');
-
-// ajaxRequest.ajaxGet().then((newPanels) => {
-//   ajaxRequest.addPanels(newPanels);
-// });
+const container = document.querySelector('.container');
+const addButton = '<button class="feeder">Feed the accordion!</button>';
+container.insertAdjacentHTML('beforeend', addButton);
 
 export default AjaxRequest;
